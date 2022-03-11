@@ -1,0 +1,26 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "36ef2b21-4e4d-497b-8fcd-bb22f0f9d573": {
+      "ProjectGuid": "36ef2b21-4e4d-497b-8fcd-bb22f0f9d573",
+      "DisplayName": "JobPortal",
+      "ColorIndex": 0
+    },
+    "78b927f3-03cc-4cc9-bf9f-155b605fe051": {
+      "ProjectGuid": "78b927f3-03cc-4cc9-bf9f-155b605fe051",
+      "DisplayName": "ClientJobPortal",
+      "ColorIndex": 1
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    },
+    "b7a640dd-ebaa-4d6a-a2ce-4691e59bd952": {
+      "ProjectGuid": "b7a640dd-ebaa-4d6a-a2ce-4691e59bd952",
+      "DisplayName": "ClientCandidate",
+      "ColorIndex": 2
+    }
+  },
+  "NextColorIndex": 3
+}

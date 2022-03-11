@@ -1,0 +1,7 @@
+F:\Labs\SOC\JobPortal\JobPortal\bin\Debug\JobPortal.dll.config
+F:\Labs\SOC\JobPortal\JobPortal\bin\Debug\JobPortal.dll
+F:\Labs\SOC\JobPortal\JobPortal\bin\Debug\JobPortal.pdb
+F:\Labs\SOC\JobPortal\JobPortal\obj\Debug\JobPortal.csproj.AssemblyReference.cache
+F:\Labs\SOC\JobPortal\JobPortal\obj\Debug\JobPortal.csproj.CoreCompileInputs.cache
+F:\Labs\SOC\JobPortal\JobPortal\obj\Debug\JobPortal.dll
+F:\Labs\SOC\JobPortal\JobPortal\obj\Debug\JobPortal.pdb
