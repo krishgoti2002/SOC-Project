@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="61580be1-70d0-426d-8b13-f10f7d4ee5ee" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="4af1ecae-9047-4228-95e1-115577e008de" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,11 +22,11 @@
     <MetadataSource Address="http://localhost:8733/Design_Time_Addresses/JobPortal/ICandidateService/mex" Protocol="mex" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="c3199047-972f-444f-9872-a569639cafe6" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/JobPortal/ICandidateService/mex" />
-    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="84010151-d0bd-4e3a-86d0-33fd7f94c0ca" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/JobPortal/ICandidateService/mex" />
-    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="ceb19ee5-ed2a-4d66-8775-37fde3b0bd6a" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/JobPortal/ICandidateService/mex" />
-    <MetadataFile FileName="JobPortal.xsd" MetadataType="Schema" ID="408e085d-f559-4c9d-b377-7d6b0aa29f00" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/JobPortal/ICandidateService/mex" />
-    <MetadataFile FileName="Arrays.xsd" MetadataType="Schema" ID="0c102e0d-313d-47da-b747-03bc5c7f404a" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/JobPortal/ICandidateService/mex" />
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="1ad99e3b-c760-4997-a618-e0cb226dfe37" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/JobPortal/ICandidateService/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="7099a89d-01cc-4e49-a82a-02ad6e6dfacf" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/JobPortal/ICandidateService/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="ce4f9522-a6e4-4d9c-8602-f2294f1d501b" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/JobPortal/ICandidateService/mex" />
+    <MetadataFile FileName="JobPortal.xsd" MetadataType="Schema" ID="bb844ce3-e9a8-457d-817f-c2707f4fdb78" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/JobPortal/ICandidateService/mex" />
+    <MetadataFile FileName="Arrays.xsd" MetadataType="Schema" ID="3f7d7be7-be3c-4fb2-8ef7-73ef7c07442c" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/JobPortal/ICandidateService/mex" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

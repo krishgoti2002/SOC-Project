@@ -47,6 +47,9 @@
     <Compile Include="Candidate.cs" />
     <Compile Include="CandidateService.cs" />
     <Compile Include="ICandidateService.cs" />
+    <Compile Include="IJobService.cs" />
+    <Compile Include="Job.cs" />
+    <Compile Include="JobService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

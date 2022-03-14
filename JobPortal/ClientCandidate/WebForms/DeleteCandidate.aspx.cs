@@ -25,7 +25,7 @@ namespace ClientCandidate.WebForms
                 {
                     Session.Remove("id");
                     Session.Remove("name");
-                    error_label.Text = "Account Deleted";
+                    //error_label.Text = "Account Deleted";
                     Response.Redirect("~/Webforms/LoginCandidate.aspx");
                 }
             }

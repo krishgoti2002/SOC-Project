@@ -5,3 +5,10 @@ F:\Labs\SOC\JobPortal\JobPortal\obj\Debug\JobPortal.csproj.AssemblyReference.cac
 F:\Labs\SOC\JobPortal\JobPortal\obj\Debug\JobPortal.csproj.CoreCompileInputs.cache
 F:\Labs\SOC\JobPortal\JobPortal\obj\Debug\JobPortal.dll
 F:\Labs\SOC\JobPortal\JobPortal\obj\Debug\JobPortal.pdb
+C:\Users\yash\Desktop\Sem-6\SOC Project\JobPortal\JobPortal\bin\Debug\JobPortal.dll.config
+C:\Users\yash\Desktop\Sem-6\SOC Project\JobPortal\JobPortal\bin\Debug\JobPortal.dll
+C:\Users\yash\Desktop\Sem-6\SOC Project\JobPortal\JobPortal\bin\Debug\JobPortal.pdb
+C:\Users\yash\Desktop\Sem-6\SOC Project\JobPortal\JobPortal\obj\Debug\JobPortal.csproj.AssemblyReference.cache
+C:\Users\yash\Desktop\Sem-6\SOC Project\JobPortal\JobPortal\obj\Debug\JobPortal.csproj.CoreCompileInputs.cache
+C:\Users\yash\Desktop\Sem-6\SOC Project\JobPortal\JobPortal\obj\Debug\JobPortal.dll
+C:\Users\yash\Desktop\Sem-6\SOC Project\JobPortal\JobPortal\obj\Debug\JobPortal.pdb
