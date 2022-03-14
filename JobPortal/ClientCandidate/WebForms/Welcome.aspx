@@ -25,7 +25,7 @@
         <div class="container w-50 m-auto">
             <div class="row">
                     <asp:HyperLink ID="hyperlink_candidate" CssClass="mr-1 btn btn-primary " runat="server" Text="Candidate" NavigateUrl="~/WebForms/LoginCandidate.aspx" />
-                    <asp:HyperLink ID="hyperlink_recruiter" CssClass="ml-1 btn btn-info" runat="server" Text="Recruiter"/>
+                    <asp:HyperLink ID="hyperlink_recruiter" CssClass="ml-1 btn btn-info" runat="server" Text="Recruiter" NavigateUrl="~/WebForms/LoginRecruiter.aspx"/>
                     
             </div>
         </div>

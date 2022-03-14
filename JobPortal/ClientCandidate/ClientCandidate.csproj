@@ -108,17 +108,40 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="Connected Services\DummyService2\ClientCandidate.DummyService2.Job.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\DummyService2\configuration91.svcinfo" />
+    <None Include="Connected Services\DummyService2\configuration.svcinfo" />
+    <None Include="Connected Services\DummyService2\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="Connected Services\DummyService\ClientCandidate.DummyService.Candidate.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <None Include="Connected Services\DummyService2\JobPortal.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\DummyService2\service.wsdl" />
+    <None Include="Connected Services\DummyService2\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\DummyService2\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Connected Services\DummyService\configuration91.svcinfo" />
     <None Include="Connected Services\DummyService\configuration.svcinfo" />
     <None Include="Connected Services\DummyService\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <Content Include="WebForms\CreateJob.aspx" />
+    <Content Include="WebForms\Dashboard.aspx" />
     <Content Include="WebForms\DeleteCandidate.aspx" />
+    <Content Include="WebForms\EditJob.aspx" />
     <Content Include="WebForms\LoginCandidate.aspx" />
+    <Content Include="WebForms\LoginRecruiter.aspx" />
     <Content Include="WebForms\RegisterCandidate.aspx" />
     <Content Include="WebForms\Welcome.aspx" />
     <Content Include="WebForms\UpdateCandidate.aspx" />
@@ -200,6 +223,11 @@
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Connected Services\DummyService2\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Connected Services\DummyService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -244,12 +272,33 @@
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
     </Compile>
+    <Compile Include="WebForms\CreateJob.aspx.cs">
+      <DependentUpon>CreateJob.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\CreateJob.aspx.designer.cs">
+      <DependentUpon>CreateJob.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForms\Dashboard.aspx.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\Dashboard.aspx.designer.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+    </Compile>
     <Compile Include="WebForms\DeleteCandidate.aspx.cs">
       <DependentUpon>DeleteCandidate.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="WebForms\DeleteCandidate.aspx.designer.cs">
       <DependentUpon>DeleteCandidate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForms\EditJob.aspx.cs">
+      <DependentUpon>EditJob.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\EditJob.aspx.designer.cs">
+      <DependentUpon>EditJob.aspx</DependentUpon>
     </Compile>
     <Compile Include="WebForms\Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>
@@ -264,6 +313,13 @@
     </Compile>
     <Compile Include="WebForms\LoginCandidate.aspx.designer.cs">
       <DependentUpon>LoginCandidate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForms\LoginRecruiter.aspx.cs">
+      <DependentUpon>LoginRecruiter.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\LoginRecruiter.aspx.designer.cs">
+      <DependentUpon>LoginRecruiter.aspx</DependentUpon>
     </Compile>
     <Compile Include="WebForms\RegisterCandidate.aspx.cs">
       <DependentUpon>RegisterCandidate.aspx</DependentUpon>
@@ -305,6 +361,7 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\DummyService2\" />
     <WCFMetadataStorage Include="Connected Services\DummyService\" />
   </ItemGroup>
   <PropertyGroup>
