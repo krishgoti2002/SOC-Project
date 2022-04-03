@@ -9,15 +9,13 @@ namespace ClientCandidate.WebForms
 {
     public partial class Home : System.Web.UI.Page
     {
-        private DummyService.ICandidateService service;
+        private JobService.IJobService service;
         protected void Page_Load(object sender, EventArgs e)
         {
-            service = (DummyService.ICandidateService)Session["service"];
-            DummyService.Candidate []candidates = service.GetAllCandidates();
-            for(int i = 0; i<candidates.Count();i++)
-            {
-                Label2.Text += candidates[i].Name + " ";
-            }
+            service = (JobService.IJobService)Session["service_2"];
+            JobService.Job[] jobs = service.GetAllJobs();
+            grid_view_jobs.DataSource = jobs;
+            grid_view_jobs.DataBind();
         }
     }
 }

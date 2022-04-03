@@ -9,10 +9,10 @@ namespace ClientCandidate.WebForms
 {
     public partial class RegisterCandidate : System.Web.UI.Page
     {
-        private DummyService.ICandidateService service;
+        private CandidateService.ICandidateService service;
         protected void Page_Load(object sender, EventArgs e)
         {
-            service = (DummyService.ICandidateService)Session["service"];
+            service = (CandidateService.ICandidateService)Session["service_1"];
         }
 
         protected void button_add_skills_Click(object sender, EventArgs e)
@@ -35,22 +35,19 @@ namespace ClientCandidate.WebForms
 
         protected void button_register_Click(object sender, EventArgs e)
         {
-            string[] skills = new string[listbox_skills.Items.Count];
-            int i = 0;
+            string skills = "";
             foreach (var item in listbox_skills.Items)
-                skills[i++] = item.ToString();
+                skills += item.ToString() + ",";
 
-            string[] locations = new string[listbox_prefered_location.Items.Count];
-            i = 0;
+            string locations = "";        
             foreach (var item in listbox_prefered_location.Items)
-                locations[i++] = item.ToString();
+                locations += item.ToString() + ",";
 
-            string[] experience = new string[listbox_experience.Items.Count];
-            i = 0;
+            string experience = "";
             foreach (var item in listbox_experience.Items)
-                experience[i] = item.ToString();
+                experience += item.ToString() + ",";
 
-            DummyService.Candidate candidate = new DummyService.Candidate
+            CandidateService.Candidate candidate = new CandidateService.Candidate
             {
                 Name = textbox_name.Text,
                 Email = textbox_email.Text,
@@ -64,7 +61,7 @@ namespace ClientCandidate.WebForms
                 JobExperiences = experience
             };
             service.AddCandidate(candidate);
-            label_register.Text = "Done";
+            Response.Redirect("~/Webforms/LoginCandidate.aspx");
         }
 
         protected void button_clear_skills_Click(object sender, EventArgs e)

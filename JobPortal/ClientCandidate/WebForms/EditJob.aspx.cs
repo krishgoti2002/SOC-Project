@@ -9,11 +9,11 @@ namespace ClientCandidate.WebForms
 {
     public partial class EditJob : System.Web.UI.Page
     {
-        private DummyService2.IJobService service;
+        private JobService.IJobService service;
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            service = (DummyService2.IJobService)Session["service2"];
+            service = (JobService.IJobService)Session["service_2"];
             if (!IsPostBack)
             {
                 var job = service.GetJob((int)Session["edit_id_job"]);
@@ -31,7 +31,7 @@ namespace ClientCandidate.WebForms
 
         protected void button_register_Click(object sender, EventArgs e)
         {
-            DummyService2.Job newJob = new DummyService2.Job()
+            JobService.Job newJob = new JobService.Job()
             {
                 Title = textbox_title.Text,
                 City = textbox_city.Text,

@@ -12,3 +12,15 @@ C:\Users\yash\Desktop\Sem-6\SOC Project\JobPortal\JobPortal\obj\Debug\JobPortal.
 C:\Users\yash\Desktop\Sem-6\SOC Project\JobPortal\JobPortal\obj\Debug\JobPortal.csproj.CoreCompileInputs.cache
 C:\Users\yash\Desktop\Sem-6\SOC Project\JobPortal\JobPortal\obj\Debug\JobPortal.dll
 C:\Users\yash\Desktop\Sem-6\SOC Project\JobPortal\JobPortal\obj\Debug\JobPortal.pdb
+F:\Labs\SOC\SOC Project\JobPortal\JobPortal\bin\Debug\JobPortal.dll.config
+F:\Labs\SOC\SOC Project\JobPortal\JobPortal\bin\Debug\JobPortal.dll
+F:\Labs\SOC\SOC Project\JobPortal\JobPortal\bin\Debug\JobPortal.pdb
+F:\Labs\SOC\SOC Project\JobPortal\JobPortal\bin\Debug\EntityFramework.dll
+F:\Labs\SOC\SOC Project\JobPortal\JobPortal\bin\Debug\EntityFramework.SqlServer.dll
+F:\Labs\SOC\SOC Project\JobPortal\JobPortal\bin\Debug\EntityFramework.xml
+F:\Labs\SOC\SOC Project\JobPortal\JobPortal\bin\Debug\EntityFramework.SqlServer.xml
+F:\Labs\SOC\SOC Project\JobPortal\JobPortal\obj\Debug\JobPortal.csproj.AssemblyReference.cache
+F:\Labs\SOC\SOC Project\JobPortal\JobPortal\obj\Debug\JobPortal.csproj.CoreCompileInputs.cache
+F:\Labs\SOC\SOC Project\JobPortal\JobPortal\obj\Debug\JobPortal.csproj.CopyComplete
+F:\Labs\SOC\SOC Project\JobPortal\JobPortal\obj\Debug\JobPortal.dll
+F:\Labs\SOC\SOC Project\JobPortal\JobPortal\obj\Debug\JobPortal.pdb

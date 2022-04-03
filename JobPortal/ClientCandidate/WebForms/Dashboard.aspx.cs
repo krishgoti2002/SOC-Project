@@ -9,11 +9,12 @@ namespace ClientCandidate.WebForms
 {
     public partial class Dashboard : System.Web.UI.Page
     {
-        private DummyService2.IJobService service;
+        private JobService.IJobService service;
         protected void Page_Load(object sender, EventArgs e)
         {
-            service = (DummyService2.IJobService)Session["service2"];
-            DummyService2.Job[] jobs = service.GetAllJobs();
+            service = (JobService.IJobService)Session["service_2"];
+            label_name.Text = "Welcome " +  Session["name"].ToString();
+            JobService.Job[] jobs = service.GetAllJobs();
             GridView1.DataSource = jobs;
             GridView1.DataBind();
         }

@@ -10,22 +10,21 @@ namespace ClientCandidate.WebForms
 {
     public partial class DeleteCandidate : System.Web.UI.Page
     {
-        private DummyService.ICandidateService service;
+        private CandidateService.ICandidateService service;
         protected void Page_Load(object sender, EventArgs e)
         {
-            service = (DummyService.ICandidateService)Session["service"];
+            service = (CandidateService.ICandidateService)Session["service_1"];
         }
 
         protected void button_delete_Click(object sender, EventArgs e)
         {
             if (Session["id"] != null)
             {
-                DummyService.Candidate candidate = service.RemoveCandidate(int.Parse(Session["id"] + ""));
+                CandidateService.Candidate candidate = service.RemoveCandidate(int.Parse(Session["id"] + ""));
                 if (candidate != null)
                 {
                     Session.Remove("id");
                     Session.Remove("name");
-                    //error_label.Text = "Account Deleted";
                     Response.Redirect("~/Webforms/LoginCandidate.aspx");
                 }
             }

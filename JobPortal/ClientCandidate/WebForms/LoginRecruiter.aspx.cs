@@ -11,15 +11,18 @@ namespace ClientCandidate.WebForms
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["id"] != null && Session["id"].ToString().Equals("0") && Session["name"].ToString().Equals("admin"))
+                Response.Redirect("~/Webforms/Dashboard.aspx");
         }
 
         protected void button_login_Click(object sender, EventArgs e)
         {
             String email = textbox_email.Text;
             String password = textbox_password.Text;
-            if (email == "yash@gmail.com" && password == "123456")
+            if (email == "admin@gmail.com" && password == "admin123")
             {
+                Session["id"] = "0";
+                Session["name"] = "admin";
                 Response.Redirect("~/Webforms/Dashboard.aspx");   
             } else
             {

@@ -10,10 +10,10 @@ namespace ClientCandidate.WebForms
 {
     public partial class LoginCandidate : System.Web.UI.Page
     {
-        private DummyService.ICandidateService service;
+        private CandidateService.ICandidateService service;
         protected void Page_Load(object sender, EventArgs e)
         {
-            service = (DummyService.ICandidateService)Session["service"];
+            service = (CandidateService.ICandidateService)Session["service_1"];
             if(Session["id"] != null && Session["name"] != null)
                 Response.Redirect("~/Webforms/Home.aspx");
         }
@@ -22,7 +22,7 @@ namespace ClientCandidate.WebForms
         {
             string email = textbox_email.Text;
             string password = textbox_password.Text;
-            DummyService.Candidate []candidates = service.GetAllCandidates();
+            CandidateService.Candidate []candidates = service.GetAllCandidates();
             for(int i = 0; i < candidates.Length ;i++)
             {
                 if(candidates[i].Email.Equals(email) && candidates[i].Password.Equals(password))

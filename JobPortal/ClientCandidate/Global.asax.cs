@@ -22,13 +22,13 @@ namespace ClientCandidate
         }
         void Session_Start(object sender, EventArgs e)
         {
-            Session["service"] = new DummyService.CandidateServiceClient();
-            Session["service2"] = new DummyService2.JobServiceClient();
+            Session["service_1"] = new CandidateService.CandidateServiceClient();
+            Session["service_2"] = new JobService.JobServiceClient();
         }
         void Session_End(object sender, EventArgs e)
         {
-            Session.Remove("service");
-            Session.Remove("service2");
+            Session.Remove("service_1");
+            Session.Remove("service_2");
         }
     }
 }

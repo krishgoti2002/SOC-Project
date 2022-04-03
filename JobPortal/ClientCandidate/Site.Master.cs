@@ -11,7 +11,18 @@ namespace ClientCandidate
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["id"] == null && Session["name"] == null)
+            {
+                link_button_logout.Visible = false;
+                link_profile.Visible = false;
+            }
+            else
+            {
+                link_button_logout.Visible = true;
+                if (!Session["name"].ToString().Equals("admin"))
+                    link_profile.Visible = true;
 
+            }
         }
         protected void logout_button_Click(object sender, EventArgs e)
         {
@@ -19,7 +30,7 @@ namespace ClientCandidate
             {
                 Session.Remove("id");
                 Session.Remove("name");
-                Response.Redirect("~/Webforms/LoginCandidate.aspx");
+                Response.Redirect("~/Webforms/Welcome.aspx");
                 link_button_logout.Text = "Done";
             }
         }

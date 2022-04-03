@@ -9,7 +9,7 @@ namespace ClientCandidate.WebForms
 {
     public partial class UpdateCandidate : System.Web.UI.Page
     {
-        private DummyService.ICandidateService service;
+        private CandidateService.ICandidateService service;
         private int _id;
 
         protected void Page_Load(object sender, EventArgs e)
@@ -17,22 +17,22 @@ namespace ClientCandidate.WebForms
             if(Session["id"] == null && Session["name"] == null)
                 Response.Redirect("~/Webforms/LoginCandidate.aspx");
 
-            service = (DummyService.ICandidateService)Session["service"];
+            service = (CandidateService.ICandidateService)Session["service_1"];
             _id = int.Parse(Session["id"].ToString());
-            DummyService.Candidate candidate = service.GetCandidate(_id);
+            CandidateService.Candidate candidate = service.GetCandidate(_id);
             if (!IsPostBack)
             {
                 textbox_name.Text = candidate.Name;
                 textbox_email.Text = candidate.Email;
                 textbox_collage_name.Text = candidate.CollageName;
-                textbox_dob.Text = candidate.DateOfBirth.ToString();
+                textbox_dob.Text = Convert.ToDateTime(candidate.DateOfBirth.ToString()).ToString();
                 radio_button_gender.SelectedIndex = ("male".Equals(candidate.Gender)) ? 0 : 1 ;
                 
                 textbox_mobile.Text = candidate.Mobile;
                 textbox_password.Text = candidate.Password;
-                string[] skills = candidate.Skills;
-                string[] locations = candidate.PreferedJobLocations;
-                string[] experience = candidate.JobExperiences;
+                string[] skills = candidate.Skills.Split(',');
+                string[] locations = candidate.PreferedJobLocations.Split(',');
+                string[] experience = candidate.JobExperiences.Split(',');
 
                 listbox_skills.Items.Clear();
                 listbox_prefered_location.Items.Clear();
@@ -49,7 +49,7 @@ namespace ClientCandidate.WebForms
 
         protected void button_add_skills_Click(object sender, EventArgs e)
         {
-            if ("".Equals(textbox_skills.Text.ToString()))
+            if (textbox_skills.Text.ToString().Length == 0)
                 return;
             listbox_skills.Items.Add(textbox_skills.Text.ToString());
             textbox_skills.Text = "";
@@ -57,7 +57,7 @@ namespace ClientCandidate.WebForms
 
         protected void button_add_prefered_location_Click(object sender, EventArgs e)
         {
-            if ("".Equals(textbox_prefered_location.Text.ToString()))
+            if (textbox_prefered_location.Text.ToString().Length == 0)
                 return;
             listbox_prefered_location.Items.Add(textbox_prefered_location.Text.ToString());
             textbox_prefered_location.Text = "";
@@ -65,7 +65,7 @@ namespace ClientCandidate.WebForms
 
         protected void button_add_experience_Click(object sender, EventArgs e)
         {
-            if ("".Equals(textbox_experience.Text.ToString()))
+            if (textbox_experience.Text.ToString().Length == 0)
                 return;
             listbox_experience.Items.Add(textbox_experience.Text.ToString());
             textbox_experience.Text = "";
@@ -73,22 +73,19 @@ namespace ClientCandidate.WebForms
 
         protected void button_update_Click(object sender, EventArgs e)
         {
-            string[] skills = new string[listbox_skills.Items.Count];
-            int i = 0;
+            string skills = "";
             foreach (var item in listbox_skills.Items)
-                skills[i++] = item.ToString();
+                skills += item.ToString() + ",";
 
-            string[] locations = new string[listbox_prefered_location.Items.Count];
-            i = 0;
+            string locations = "";
             foreach (var item in listbox_prefered_location.Items)
-                locations[i++] = item.ToString();
+                locations += item.ToString() + ",";
 
-            string[] experience = new string[listbox_experience.Items.Count];
-            i = 0;
+            string experience = "";
             foreach (var item in listbox_experience.Items)
-                experience[i] = item.ToString();
+                experience += item.ToString() + ",";
 
-            DummyService.Candidate candidate = new DummyService.Candidate
+            CandidateService.Candidate candidate = new CandidateService.Candidate
             {
                 Id = _id,
                 Name = textbox_name.Text,
@@ -103,7 +100,7 @@ namespace ClientCandidate.WebForms
                 JobExperiences = experience
             };
             service.UpdateCandidate(candidate);
-            label_update.Text = _id.ToString() + " " + textbox_name.Text + " " + service.GetCandidate(_id).Gender;
+            message_label.Text = "Details updated...";
 
             textbox_name.ReadOnly = true;
             textbox_email.ReadOnly = true;

@@ -3,6 +3,9 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <style>
     </style>
+    <div class="alert alert-success" role="alert" id="error">
+        <h4><asp:Label ID="message_label" runat="server" Text="" CssClass="form-label"></asp:Label></h4>
+    </div>
     <h2>
         <asp:Label ID="label_update" runat="server" Text="Update"></asp:Label></h2>
     <hr />
@@ -81,7 +84,7 @@
                 <asp:Label ID="label_dob" CssClass="h4" runat="server" Text="Date of Birth : "></asp:Label>
             </td>
             <td>
-                <asp:TextBox ID="textbox_dob" runat="server" CssClass="form-control" Width="408px" CausesValidation="True" TextMode="Date" ReadOnly="True"></asp:TextBox>
+                <asp:TextBox ID="textbox_dob" runat="server" CssClass="form-control" Width="408px" CausesValidation="True" TextMode="DateTime" ReadOnly="True"></asp:TextBox>
             </td>
             <td>
                 <asp:RequiredFieldValidator ID="required_field_validator_dob" runat="server" ControlToValidate="textbox_dob" ForeColor="#CC3300">*</asp:RequiredFieldValidator>
@@ -150,10 +153,23 @@
             <td colspan="3">
                 <asp:Button ID="button_edit" CssClass="btn btn-primary" runat="server" Text="Edit" CausesValidation="False" OnClick="button_edit_Click"/>
                 <asp:Button ID="button_update" CssClass="btn btn-success" runat="server" Text="Update" OnClick="button_update_Click" />
-                <asp:HyperLink ID="hyperlink_delete" CssClass="btn btn-danger" runat="server" NavigateUrl="~/WebForms/DeleteCandidate.aspx">Delete Profile</asp:HyperLink>
+                <asp:HyperLink ID="hyperlink_delete" CssClass="btn btn-danger" runat="server" NavigateUrl="~/WebForms/DeleteCandidate.aspx">Delete Account</asp:HyperLink>
                 <asp:HyperLink ID="hyperlink_back" CssClass="btn btn-info" runat="server" NavigateUrl="~/WebForms/Home.aspx">Back</asp:HyperLink>
             </td>
         </tr>
 
     </table>
+    <script>
+        var err = document.getElementById("error");
+        var label = document.getElementById("<%= message_label.ClientID %>")
+        if (label.innerText == "") {
+            err.style.display = "none";
+        }
+        else {
+            err.style.display = "block";
+            setTimeout(function () {
+                err.style.display = "none";
+            }, 5000);
+        }
+    </script>
 </asp:Content>
